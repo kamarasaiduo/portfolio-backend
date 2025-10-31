@@ -94,8 +94,7 @@ public class SecurityConfig {
                 "https://portfolio-frontend-iota-orpin.vercel.app"
                 // ✅ Added your Vercel frontend URL
         );
-        configuration.setAllowedOrigins(allowedOrigins); "https://portfolio-frontend.netlify.app",
-
+        configuration.setAllowedOrigins(allowedOrigins);
         configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"));
         configuration.setAllowedHeaders(Arrays.asList("*"));
         configuration.setAllowCredentials(true);
