@@ -91,10 +91,10 @@ public class SecurityConfig {
                 "https://portfolio-backend-m2je.onrender.com",
                 "https://portfolio-backend.onrender.com",
                 "http://localhost:3000",
-                "https://portfolio-frontend.netlify.app",
-                "https://portfolio-frontend-iota-orpin.vercel.app"  // ✅ Added your Vercel frontend URL
+                "https://portfolio-frontend-iota-orpin.vercel.app"
+                // ✅ Added your Vercel frontend URL
         );
-        configuration.setAllowedOrigins(allowedOrigins);
+        configuration.setAllowedOrigins(allowedOrigins); "https://portfolio-frontend.netlify.app",
 
         configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"));
         configuration.setAllowedHeaders(Arrays.asList("*"));
