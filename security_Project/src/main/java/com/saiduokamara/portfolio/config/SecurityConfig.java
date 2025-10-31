@@ -28,8 +28,9 @@ public class SecurityConfig {
     @Autowired
     private JwtAuthenticationFilter jwtAuthenticationFilter;
 
-    @Value("${frontend.url:http://localhost:3000}")
+    @Value("${FRONTEND_URL:http://localhost:3000}")
     private String frontendUrl;
+
 
     @Bean
     public PasswordEncoder passwordEncoder() {
@@ -87,8 +88,11 @@ public class SecurityConfig {
         // Allow multiple origins including production URL
         List<String> allowedOrigins = Arrays.asList(
                 frontendUrl,
+                "https://portfolio-backend-m2je.onrender.com",
                 "https://portfolio-backend.onrender.com",
-                "http://localhost:3000"
+                "http://localhost:3000",
+                "https://portfolio-frontend.netlify.app",
+                "https://portfolio-frontend-iota-orpin.vercel.app"  // ✅ Added your Vercel frontend URL
         );
         configuration.setAllowedOrigins(allowedOrigins);
 
